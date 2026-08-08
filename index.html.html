@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="A6.css">
+</head>
+<body>
+<header>
+    <img class="m" src="images/bl.jpg" alt="عکس من"width="200" height="150">
+    <h6>رویه ملوانی </h6>
+    <p class="c">نرخ فعلی دلار امریکا:1,310,661 ریال</p>
+</header>
+<input type="number" id="a" placeholder="ارزش کالا">
+<br><br>
+<input type="number" id="b" placeholder="حقوق ورودی">
+<br><br>
+<button onclick="multiply()">محاسبه</button>
+<div class="df">
+
+<div class="gh">
+    <h1>:ارزش کالا </h1>
+    <p id="h"></p>
+</div>
+    <div class="cx">
+     <h2>:حقوق ورودی</h2>
+<p id="result"></p>
+</div>
+<div class="lo">
+    <h3>:ارزش افزوده</h3>
+    <p id="f"></p>
+</div>
+<div class="x">
+    <h4>:درصد هلال احمر</h4>
+    <p id="s"></p>
+</div>
+<div class="x">
+    <h5>: در هزار12 </h5>
+    <p id="k" class="v"></p>
+</div>
+    <div class="l">
+    <h1>:پسماند</h1>
+    <p id="o" class="v"></p>
+</div>
+    <div class="x">
+    <h5>:عواض فرهنگی</h5>
+    <p id="m" class="v"></p>
+</div>
+    </div>
+    <div class="x">
+    <h5>:عوارض ملوانی</h5>
+    <p id="y" class="v"></p>
+</div>
+
+
+</div>
+
+<script>
+    function multiply() {
+        let a = Number(document.getElementById("a").value)
+        let b = Number(document.getElementById("b").value)
+        let result = (a * 1310661) * (b / 100);
+        let h = (a * 1310661);
+        let f = ((result + h) * (5 / 100));
+        let s = (result) / 100;
+        let k = [(a * 1310661) * (12)] / 100000 * 20;
+        let o = a * 1310661 * 0.5 / 1000;
+        let m = a * 1310661 * 0.04 * 0.20;
+        let y = result + f + k
+
+
+        document.getElementById("result").innerHTML =
+    Number(result).toLocaleString("en-US");
+         document.getElementById("h").innerHTML =
+    Number(h).toLocaleString("en-US");
+              document.getElementById("f").innerHTML =
+    Number(f).toLocaleString("en-US");
+              document.getElementById("s").innerHTML =
+    Number(s).toLocaleString("en-US");
+                  document.getElementById("k").innerHTML =
+    Number(k).toLocaleString("en-US");
+                  document.getElementById("o").innerHTML =
+    Number(o).toLocaleString("en-US");
+                        document.getElementById("m").innerHTML =
+    Number(m).toLocaleString("en-US");
+                          document.getElementById("y").innerHTML =
+    Number(y).toLocaleString("en-US");
+
+    }
+</script>
+<div>
+    <nav>
+        <ul>
+            <li>
+                <button class="k">
+
+                    <a href="A1.html">اجرا</a>
+
+                </button>
+            </li>
+        </ul>
+    </nav>
+</div>
+<hr>
+<p class="jk">ALARUM!!!</p>
+<p class="h7">ساخت این پوروژ فقط یک نسخه ازمایشی است و برای محیط کار توصیه نمیشود</p>
+<hr>
+
+</body>
+</html>
