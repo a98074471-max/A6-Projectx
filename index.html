@@ -7,15 +7,24 @@
     <link rel="stylesheet" href="A6.css">
 </head>
 <body>
+<div class="welcome">
+    <h1>به ماشین‌حساب گمرکی خوش آمدید</h1>
+    <p>در حال آماده‌سازی...</p>
+</div>
+<header>
+    
+</header>
 <header>
     <img class="m" src="images/bl.jpg" alt="عکس من"width="200" height="150">
     <h6>رویه ملوانی </h6>
-    <p class="c">نرخ فعلی دلار امریکا:1,310,661 ریال</p>
+    <h1 class="c">🇺🇸 دلار آمریکا (USD) 1,310,661</h1>
+
 </header>
 <input type="number" id="a" placeholder="ارزش کالا">
 <br><br>
 <input type="number" id="b" placeholder="حقوق ورودی">
 <br><br>
+
 <button onclick="multiply()">محاسبه</button>
 <div class="df">
 
@@ -52,23 +61,33 @@
     <h5>:عوارض ملوانی</h5>
     <p id="y" class="v"></p>
 </div>
+<div class="x">
+    <h2>مجموع عوارض:</h2>
+    <p id="total"></p>
+</div>
+
+
 
 
 </div>
 
 <script>
+    let total = 0
     function multiply() {
         let a = Number(document.getElementById("a").value)
         let b = Number(document.getElementById("b").value)
         let result = (a * 1310661) * (b / 100);
         let h = (a * 1310661);
-        let f = ((result + h) * (5 / 100));
-        let s = (result) / 100;
-        let k = [(a * 1310661) * (12)] / 100000 * 20;
-        let o = a * 1310661 * 0.5 / 1000;
-        let m = a * 1310661 * 0.04 * 0.20;
-        let y = result + f + k
-
+        let f = ((result + h) * (5 / 100))
+        let s = (result) / 100
+        let k = [(a * 1310661) * (12)] / 100000 * 20
+        let o = a * 1310661 * 0.5 / 1000
+        let m = a * 1310661 * 0.04 * 0.20
+        let y = result + f + k;
+        let currentTotal = f + s + k + o + m + y;
+total += currentTotal;
+document.getElementById("total").innerHTML =
+    Number(total).toLocaleString("en-US");
 
         document.getElementById("result").innerHTML =
     Number(result).toLocaleString("en-US");
@@ -86,7 +105,6 @@
     Number(m).toLocaleString("en-US");
                           document.getElementById("y").innerHTML =
     Number(y).toLocaleString("en-US");
-
     }
 </script>
 <div>
@@ -102,10 +120,39 @@
         </ul>
     </nav>
 </div>
-<hr>
-<p class="jk">ALARUM!!!</p>
-<p class="h7">ساخت این پوروژ فقط یک نسخه ازمایشی است و برای محیط کار توصیه نمیشود</p>
-<hr>
+<footer>
+    <h1 class="c">
+نرخ به ریال<br>
+🇺🇸 دلار آمریکا (USD)
+1,310,661</h1><br>
+        <hr>
+    <h1 class="c">
+🇪🇺 یورو (EUR)
+1,551,964</h1><br>
+        <hr>
+    <h1 class="c">
+🇨🇳 یوان چین (CNY)
+188,931</h1><br>
+        <hr>
+    <h1 class="c">
+🇦🇪 درهم امارات (AED)
+356,885</h1><br>
+        <hr>
+    <h1 class="c">
+        نرخ ارز صادراتی دلار 1,476,255
+        </h1><br>
+    <hr>
 
+    <h1 class="c">
+🇹🇷 لیر ترکیه (TRY)
+31,223</h1><br>
+        <hr>
+    <h1 class="c">
+🇷🇺 روبل روسیه (RUB)
+16,116</h1>
+    <hr>
+    <h1 class="c">
+نرخ تبدیل <br>یورو / دلار = 1.18<br>دلار / درهم=3.19<br>دلار / یوان =6.02 <br></h1>
+</footer>
 </body>
 </html>
